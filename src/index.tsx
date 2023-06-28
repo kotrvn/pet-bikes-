@@ -4,6 +4,6 @@ import Router from './routes/Routes.tsx';
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <Router />
+    <App />
   </React.StrictMode>,
 )

@@ -1,4 +1,4 @@
-import styles from '../../pages/Home/Home.module.css'
+import styles from '../../views/Home/Home.module.css'
 import React from "react";
 
 export type BikeItemProps = {

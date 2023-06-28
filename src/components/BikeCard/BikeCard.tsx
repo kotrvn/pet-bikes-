@@ -1,13 +1,16 @@
-import styles from './BikeCard.module.scss'
 import React from "react";
 import {Link} from "react-router-dom";
+import styles from '../../views/Home/Home.module.css'
+import React from "react";
+
+import styles from './BikeCard.module.scss'
 
 export type BikeItemProps = {
-    id: number;
     name: string;
     image: string;
     price: number;
 }
+
 const BikeCard: React.FC<BikeItemProps> = ({ id, name, picture, price}) => {
     return (
         <div className={styles.item}>
@@ -27,3 +30,4 @@ const BikeCard: React.FC<BikeItemProps> = ({ id, name, picture, price}) => {
 }
 
 export default BikeCard
+

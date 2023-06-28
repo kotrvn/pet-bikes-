@@ -1,12 +1,15 @@
-import { useState } from 'react'
+import React from 'react'
+import Routes from "./routes/Routes.tsx";
+import {Provider} from "react-redux";
+import { store } from './store'
+import './assets/styles/global.scss'
 
 
-function App() {
+export const App: React.FC = () => {
   return (
-    <div>
-        <h1>asdasdasddad</h1>
-    </div>
+      <Provider store={store}>
+        <Routes />
+      </Provider>
+
   )
 }
-
-export default App

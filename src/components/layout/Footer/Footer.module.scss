@@ -1,3 +1,17 @@
 .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   background: #eee;
+  padding: 20px;
+
+  &__container {
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  &__text {
+    text-align: center;
+  }
 }

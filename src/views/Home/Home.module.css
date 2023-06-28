@@ -1,15 +1,4 @@
-.item {
-    border: 1px solid crimson;
-}
 
-.image {
-    width: auto;
-    height: 200px;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.info {
-    padding: 15px;
+.list {
+    display: flex;
 }

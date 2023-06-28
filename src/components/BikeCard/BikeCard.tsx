@@ -1,32 +1,33 @@
+import React from "react";
+import {Link} from "react-router-dom";
 import styles from '../../views/Home/Home.module.css'
 import React from "react";
+
+import styles from './BikeCard.module.scss'
 
 export type BikeItemProps = {
     name: string;
     image: string;
     price: number;
 }
-const BikeItem: React.FC<BikeItemProps> = ({ name, image, price}) => {
+
+const BikeCard: React.FC<BikeItemProps> = ({ id, name, picture, price}) => {
     return (
-        <div>
-            <h1>Bikes</h1>
-            <div className={styles.item}>
-                <div>
-                    <div className={styles.image} style={{
-                        backgroundImage: `url(${image})`
-                    }} />
-                    <div className={styles.info}>
-                        <h2>{name}</h2>
-                        <p>{new Intl.NumberFormat('ru-Ru', {
-                            style: 'currency',
-                            currency: 'RUB',
-                        }).format(price)}</p>
-                        <button>Read more</button>
-                    </div>
-                </div>
+        <div className={styles.item}>
+            <div className={styles.item__image} style={{
+                backgroundImage: `url(${picture})`
+            }} />
+            <div className={styles.item__info}>
+                <h2 className={styles.item__name}>{name}</h2>
+                <p className={styles.item__price}>{new Intl.NumberFormat('ru-Ru', {
+                    style: 'currency',
+                    currency: 'RUB',
+                }).format(price)}</p>
+                <Link to={`/bikes/${id}`} className={styles.item__link} >Read more</Link>
             </div>
         </div>
     )
 }
 
-export default BikeItem
+export default BikeCard
+

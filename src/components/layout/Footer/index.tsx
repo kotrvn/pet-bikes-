@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Header.module.scss'
+import styles from './Footer.module.scss'
 
-export const Header: React.FC = () => {
+export const Footer: React.FC = () => {
     return (
-        <header className={styles.header}>
-            <div>BIKES</div>
-        </header>
+        <footer className={styles.footer}>
+            <div className={styles.footer__text}>BIKES (c) 2023</div>
+        </footer>
     )
 }
